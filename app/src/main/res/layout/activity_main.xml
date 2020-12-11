@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:cpb_background_progressbar_color="#F2F2F2"
+        app:cpb_background_progressbar_width="20dp"
+        app:cpb_progress_max="1000"
+        app:cpb_progressbar_color="#039BE5"
+        app:cpb_progressbar_width="15dp"
+        app:cpb_round_border="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Maqsad 1000"
+        app:layout_constraintBottom_toBottomOf="@id/progressBar"
+        app:layout_constraintLeft_toLeftOf="@id/progressBar"
+        app:layout_constraintRight_toRightOf="@id/progressBar"
+        app:layout_constraintTop_toTopOf="@id/progressBar"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="@id/progressBar"
+        app:layout_constraintLeft_toLeftOf="@id/progressBar"
+        app:layout_constraintRight_toRightOf="@id/progressBar"
+        app:layout_constraintTop_toTopOf="@id/progressBar" />
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Qadamlar"
+        app:layout_constraintBottom_toBottomOf="@id/progressBar"
+        app:layout_constraintLeft_toLeftOf="@id/progressBar"
+        app:layout_constraintRight_toRightOf="@id/progressBar"
+        app:layout_constraintTop_toTopOf="@id/progressBar"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Start"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progressBar"
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintWidth_percent="0.6" />
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/btn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Press and hold the button to reset the data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/linear2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95">
+
+        <ImageView
+            android:id="@+id/destination_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_destination__1_" />
+
+        <TextView
+            android:id="@+id/destination_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Metr"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/linear1"
+        app:layout_constraintRight_toLeftOf="@id/linear3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95">
+
+        <ImageView
+            android:id="@+id/kcal_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_flame" />
+
+        <TextView
+            android:id="@+id/kcal_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kcal"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/linear2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95">
+
+        <ImageView
+            android:id="@+id/time_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_fast_time" />
+
+        <Chronometer
+            android:textColor="@color/black"
+            android:id="@+id/chronometer"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:textSize="15sp" />
+
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
